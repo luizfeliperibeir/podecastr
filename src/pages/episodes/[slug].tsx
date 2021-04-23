@@ -30,7 +30,7 @@ export default function Episode({ episode }: EpisodeProps){
                     <img src="/arrow-left.svg" alt="voltar "/>
                 </button>
                 <Image 
-                width={700} 
+                width={700}
                 height={160} 
                 src={episode.thumbnail} 
                 objectFit="cover" />
@@ -47,8 +47,8 @@ export default function Episode({ episode }: EpisodeProps){
             </header>
 
 
-            <div className={styles.description}>
-                {episode.description}
+            <div className={styles.description}
+            dangerouslySetInnerHTML ={{ __html:episode.description }}>
             </div>
         </div>
     )
